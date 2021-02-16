@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Alegreya SC';
+    src: local('Alegreya SC Regular'), local('AlegreyaSC-Regular'), url('../fonts/Alegreyascregular.woff2') format('woff2'), url('../fonts/Alegreyascregular.woff') format('woff'), url('../fonts/Alegreyascregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Alegreya SC';
+    src: local('Alegreya SC Italic'), local('AlegreyaSC-Italic'), url('../fonts/Alegreyascitalic.woff2') format('woff2'), url('../fonts/Alegreyascitalic.woff') format('woff'), url('../fonts/Alegreyascitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Alegreya SC';
+    src: local('Alegreya SC Medium Italic'), local('AlegreyaSC-MediumItalic'), url('../fonts/Alegreyascmediumitalic.woff2') format('woff2'), url('../fonts/Alegreyascmediumitalic.woff') format('woff'), url('../fonts/Alegreyascmediumitalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Alegreya SC';
+    src: local('Alegreya SC ExtraBold Italic'), local('AlegreyaSC-ExtraBoldItalic'), url('../fonts/Alegreyascextrabolditalic.woff2') format('woff2'), url('../fonts/Alegreyascextrabolditalic.woff') format('woff'), url('../fonts/Alegreyascextrabolditalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Alegreya SC';
+    src: local('Alegreya SC ExtraBold'), local('AlegreyaSC-ExtraBold'), url('../fonts/Alegreyascextrabold.woff2') format('woff2'), url('../fonts/Alegreyascextrabold.woff') format('woff'), url('../fonts/Alegreyascextrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Alegreya SC';
+    src: local('Alegreya SC Black'), local('AlegreyaSC-Black'), url('../fonts/Alegreyascblack.woff2') format('woff2'), url('../fonts/Alegreyascblack.woff') format('woff'), url('../fonts/Alegreyascblack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Alegreya SC';
+    src: local('Alegreya SC Medium'), local('AlegreyaSC-Medium'), url('../fonts/Alegreyascmedium.woff2') format('woff2'), url('../fonts/Alegreyascmedium.woff') format('woff'), url('../fonts/Alegreyascmedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Alegreya SC';
+    src: local('Alegreya SC Bold Italic'), local('AlegreyaSC-BoldItalic'), url('../fonts/Alegreyascbolditalic.woff2') format('woff2'), url('../fonts/Alegreyascbolditalic.woff') format('woff'), url('../fonts/Alegreyascbolditalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Alegreya SC';
+    src: local('Alegreya SC Bold'), local('AlegreyaSC-Bold'), url('../fonts/Alegreyascbold.woff2') format('woff2'), url('../fonts/Alegreyascbold.woff') format('woff'), url('../fonts/Alegreyascbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Alegreya SC';
+    src: local('Alegreya SC Black Italic'), local('AlegreyaSC-BlackItalic'), url('../fonts/Alegreyascblackitalic.woff2') format('woff2'), url('../fonts/Alegreyascblackitalic.woff') format('woff'), url('../fonts/Alegreyascblackitalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Bad Script';
+    src: local('Bad Script Regular'), local('BadScript-Regular'), url('../fonts/Badscriptregular.woff2') format('woff2'), url('../fonts/Badscriptregular.woff') format('woff'), url('../fonts/Badscriptregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Candara';
+	src: url('../fonts/CANDARA.eot');
+	src: local('☺'), url('../fonts/CANDARA.woff') format('woff'), url('../fonts/CANDARA.ttf') format('truetype'), url('../fonts/CANDARA.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Candara';
+	src: url('fonts/Candara_Bold.eot');
+	src: local('☺'), url('../fonts/Candara_Bold.woff') format('woff'), url('../fonts/Candara_Bold.ttf') format('truetype'), url('../fonts/Candara_Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
