@@ -6,6 +6,7 @@
     flex-direction: column;
     min-height: 100vh;
     overflow-y: hidden;
+    scroll-behavior: smooth;
 }
 .container{
     max-width: 1170px;
@@ -13,7 +14,11 @@
     padding-right: 15px;
     margin: 0 auto;
 }
-
+.main{
+    flex: 1 0;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
 body.overflow-hidden {
     overflow: hidden;
 }
@@ -27,7 +32,39 @@ body.overflow-hidden {
     letter-spacing: 0.03em;
     font-size: 29px;
 }
-
+.main-heading{
+    font-family: 'Alegreya SC';
+    font-size: 60px;
+    line-height: 60px;
+}
+.main-heading-italic{
+    font-family: 'Bad Script';
+    font-size: 40px;
+    line-height: 50px;
+}
+.scroll-btn{
+    &:hover{
+        opacity: .7;
+    }
+    display: inline-block;
+    color: #363636;
+    font-size: 24px;
+    font-family: 'Bad Script';
+    transform-origin: center;
+    transform: rotate(-90deg);
+    padding-left: 70px;
+    position:absolute;
+    left: -70px;
+    bottom: 20px;
+    &::before{
+        content: url('../img/home/arrow.svg');
+        transform: rotate(-180deg);
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+    }
+}
 .header{
     position: fixed;
     backdrop-filter: blur(12px);
@@ -67,7 +104,7 @@ body.overflow-hidden {
             }
             a{  
                 &:hover{
-                    opacity: .8;
+                    opacity: .7;
                 }
                 &.current{
                     position: relative;
@@ -104,15 +141,7 @@ body.overflow-hidden {
     background-size: cover;
     padding-bottom: 100px;
     &__title{
-        font-family: 'Alegreya SC';
-        font-size: 60px;
-        line-height: 60px;
         margin-bottom: 150px;
-        span{
-            font-family: 'Bad Script';
-            font-size: 40px;
-            line-height: 50px;
-        }
     }
     &__inner{
         display: flex;
@@ -122,25 +151,9 @@ body.overflow-hidden {
         position: relative;
     }
     &__scroll-btn{
-        display:block;
-        color: #363636;
-        font-size: 24px;
-        line-height: 47px;
-        font-family: 'Bad Script';
-        transform: rotate(-90deg);
         position:absolute;
-        padding-left: 70px;
         left: -70px;
         bottom: 20px;
-        &::before{
-            content: url('../img/home/arrow.svg');
-            transform: rotate(-180deg);
-            display: inline-block;
-            position: absolute;
-            left: 0;
-            bottom: -10px;
-
-        }
     }
     .intro-circle{
         position: relative;
@@ -447,6 +460,9 @@ body.overflow-hidden {
     }
 }
 .footer{
+    a:hover{
+        opacity: .7;
+    }
     padding-top: 40px;
     padding-bottom: 20px;
     &__inner{
@@ -489,5 +505,191 @@ body.overflow-hidden {
         justify-content: space-between;
         min-width: 100px;
         align-items: center;
+    }
+}
+.portfolio-intro{
+    background: url('../img/home/portfolio/bg.svg') center/ cover no-repeat,
+    #F4ECCA;
+    padding-top: 140px;
+    padding-bottom: 200px;
+    position: relative;
+    &__inner{
+        position: relative;
+    }
+    &__title{
+        margin-bottom: 60px;
+    }
+    &__title-italic{
+        margin-bottom: 40px;
+    }
+    &__text-italic{
+        font-family: 'Bad Script';
+        font-size: 24px;
+        line-height: 167%;
+        letter-spacing: 0.02em;
+        margin-bottom: 40px;
+    }
+    &__text{
+        font-family: 'Candara';
+        font-size: 16px;
+        line-height: 187%;
+        text-align: justify;
+        letter-spacing: 0.04em;
+        li{
+            margin-bottom: 10px;
+        }
+    }
+    &__scroll-btn{
+        bottom: -120px;
+    }
+}
+
+
+.gallery{
+    background:url('../img/portfolio/gallery/image.png') center bottom/ contain no-repeat,
+                            url('../img/portfolio/gallery/bg.svg')top center/ cover repeat,
+                        #363636;
+    padding-top: 100px;
+    padding-bottom: 230px;
+    &__title{
+        color: #F4ECCA;
+    }
+    &__title-italic{
+        &::after{
+            content:url(../img/portfolio/gallery/arrow.svg);
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        &:hover{
+            opacity: .7;
+        }
+        position: relative;
+        display:block;
+        margin-right: 0;
+        padding-right: 50px;
+        width: 280px;
+        margin-left: auto;
+        color: #FEE65B;
+    }
+    &__inner{
+        columns: 2 400px;
+        column-gap: 50px;
+        width: 98%;
+        margin: 35px auto;
+    }
+    &__item{
+        display: inline-block;
+        position: relative;
+        border:1px solid rgba(253, 254, 254, 0.2);
+        margin-bottom: 40px;
+        border-radius: 15px;
+        z-index: 2;
+        &:after{
+            content: "";
+            border:1px solid rgba(253, 254, 254, 0.2);
+            background: radial-gradient(69.79% 69.79% at 14.29% 19.22%, rgba(253, 254, 254, 0.7) 0%, rgba(242, 250, 249, 0.1) 100%);
+            border-radius: 15px;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            right: -25px;
+            bottom: -25px;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            background: linear-gradient(185.59deg, #F4EABB -0.74%, rgba(244, 234, 187, 0.31) -0.73%, rgba(244, 234, 187, 0.06) 100.39%);
+            border-radius: 15px;
+        }
+        img{
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 15px;
+        }
+    }
+}
+.not-found{
+    position: relative;
+    padding-top: 120px;
+    text-align: center;
+    overflow: hidden;
+    min-height: 100vh;
+    z-index: 2;
+    &__num-title{
+        font-family: 'Bad Script';
+        font-size: 150px;
+        letter-spacing: 0.03em;
+        filter: blur(7px);
+        color: #9B9CA0;
+        font-weight: 700;
+        margin-bottom: 100px;
+    }
+    &__title-italic{
+        color: #F4ECCA;
+        margin-bottom: 80px;
+        margin-left: -120px;
+    }
+    &__title{
+        color: #F4ECCA;
+        margin-right: -80px;
+        margin-bottom: 260px;
+    }
+    &__img{
+        position: absolute;
+        right: 0;
+        top: -30px;
+        opacity: .1;
+    }
+    &__title-italic--bootom-title{
+        background-color: #F4ECCA;
+        color: #363636;
+        text-align: right;
+        padding-right: 30%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    &__ellipse{
+        z-index: -1;
+        position: absolute;
+        width: 500px;
+        height: 490px;
+        left: -80px;
+        top: 180px;
+        background:  radial-gradient(69.79% 69.79% at 14.29% 19.22%, rgba(253, 254, 254, 0.5) 0%, rgba(242, 250, 249, 0.04) 100%);
+        background-blend-mode: overlay, normal;
+        backdrop-filter: blur(20px);
+        border-radius:50%;
+        border: 1px solid rgba(253, 254, 254, 0.1) ;
+        transform: matrix(1, -0.05, 0.1, 1, 0, 0);
+    }
+}
+.policy{
+    padding-top: 140px;
+    text-align: center;
+    &__title{
+        text-align: left;
+        text-transform: uppercase;
+        color: #F4EABB;
+        margin-bottom: 80px;
+    }
+    &__text{
+        border: 1px solid #E9E2C5;
+        border-radius: 15px;
+        padding: 60px;
+        font-family: 'Candara';
+        font-size: 16px;
+        line-height: 30px;
+        text-align: justify;
+    }
+    &__img{
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 }

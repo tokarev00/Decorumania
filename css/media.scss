@@ -8,6 +8,14 @@
     .title-italic{
         font-size: 25px;
     }
+    .main-heading{
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .main-heading-italic{
+        font-size: 27px;
+        line-height: 30px;
+    }
     .header{
         padding-top: 10px;
         padding-bottom: 15px;
@@ -90,13 +98,7 @@
         padding-top: 75px;
         padding-bottom: 60px;
         &__title{
-            font-size: 45px;
-            line-height: 45px;
             margin-bottom: 75px;
-            span{
-                font-size: 27px;
-                line-height: 30px;
-            }
         }
         .intro-circle{
             width: 280px;
@@ -263,6 +265,99 @@
                 margin-bottom: 20px;
         }
     }
+    .portfolio-intro{
+        padding-top: 70px;
+        padding-bottom: 20px;
+        &__title{
+            margin-bottom: 10px;
+        }
+        &__title-italic{
+            margin-bottom: 20px;
+        }
+        &__text{
+            padding-right: 50px;
+            padding-left: 50px;
+            max-width: 100%;
+            font-size: 14px;
+            li{
+                margin-bottom: 10px;
+            }
+        }
+        &__scroll-btn{
+            left: auto;
+            right: -70px;
+            bottom: 75px;
+        }
+    }
+    .gallery{
+        background:#363636;
+        padding-bottom: 20px;
+        &__title{
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        &__title-italic{
+            text-align: center;
+            width: 280px;
+            margin: 0 auto;
+        }
+        &__inner{
+            columns: 1;
+            column-gap: 0;
+            width: 100%;
+            margin: 15px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__item{
+            width: 80%;
+            &::after{
+                display: none;
+            }
+        }
+    }
+    .not-found{
+        padding-top: 70px;
+        padding-left: 15px;
+        padding-right: 15px;
+        &__num-title{
+            margin-bottom: 80px;
+        }
+        &__title-italic{
+            color: #F4ECCA;
+            margin-bottom: 20px;
+            margin-left: -120px;
+        }
+        &__title{
+            color: #F4ECCA;
+            margin-right: -80px;
+            margin-bottom: 10px;
+        }
+        &__img{
+            display: none;
+        }
+        &__title-italic--bootom-title{
+            background-color: transparent;
+            color: #F4ECCA;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        &__ellipse{
+            display: none;
+        }
+    }
+    .policy{
+        padding-top: 70px;
+        &__title{
+            margin-bottom: 30px;
+        }
+        &__img{
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
 }
 
 
@@ -379,6 +474,35 @@
             margin-bottom: 0;
         }
     }
+    .portfolio-intro{
+        padding-top: 70px;
+        padding-bottom: 10px;
+
+
+        &__text{
+            padding-right: 0;
+            padding-left: 0;
+        }
+        &__scroll-btn{
+            display: none;
+        }
+    }
+    .policy{
+
+        padding-top: 70px;
+        &__title{
+            text-align: center;
+            font-size: 23px;
+        }
+        &__text{
+            padding: 25px;
+            font-size: 14px;
+        }
+        &__img{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
 }
 
 
@@ -392,6 +516,14 @@
     .title-italic{
         font-size: 18px;
     }
+    .main-heading{
+        font-size: 33px;
+        line-height: 33px;
+    }
+    .main-heading-italic{
+        font-size: 23px;
+        line-height: 34px;
+    }
     .intro{
         padding-top: 60px;
         padding-bottom: 60px;
@@ -402,13 +534,7 @@
             display: none;
         }
         &__title{
-            font-size: 33px;
-            line-height: 33px;
             margin-bottom: 75px;
-            span{
-                font-size: 23px;
-                line-height: 34px;
-            }
         }
         .intro-circle{
             width: 230px;
@@ -516,6 +642,51 @@
                 flex: 1 1 100%;
                 justify-content: center;
                 margin-bottom: 20px;
+        }
+    }
+    .gallery{
+        &__title{
+            font-size: 25px;
+        }
+        &__title-italic{
+            width: 240px;
+        }
+    }
+    .not-found{
+        text-align: left;
+        padding-top: 70px;
+        padding-bottom: 10px;
+        &__num-title{
+            margin-bottom: 100px;
+        }
+        &__title-italic{
+            color: #F4ECCA;
+            margin-bottom: 40px;
+            margin-left: 0;
+        }
+        &__title{
+            color: #F4ECCA;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        &__img{
+            display: none;
+        }
+        &__title-italic--bootom-title{
+            background-color: transparent;
+            color: #F4ECCA;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: left;
+            padding-right: 15px;
+        }
+        &__ellipse{
+            display: none;
+        }
+    }
+    .policy{
+        &__title{
+            font-size: 20px;
         }
     }
 }
