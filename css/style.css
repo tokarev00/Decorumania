@@ -456,6 +456,112 @@ body.overflow-hidden {
   display: none;
 }
 
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotation-back {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes rotation-back {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(1, 1) rotate(-90deg) translateX(0);
+            transform: scale(1, 1) rotate(-90deg) translateX(0);
+  }
+  10% {
+    -webkit-transform: scale(1.1, 0.9) rotate(-90deg) translateX(0);
+            transform: scale(1.1, 0.9) rotate(-90deg) translateX(0);
+  }
+  30% {
+    -webkit-transform: scale(0.9, 1.1) rotate(-90deg) translateX(-20px);
+            transform: scale(0.9, 1.1) rotate(-90deg) translateX(-20px);
+  }
+  50% {
+    -webkit-transform: scale(1.05, 0.95) rotate(-90deg) translateX(0);
+            transform: scale(1.05, 0.95) rotate(-90deg) translateX(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) rotate(-90deg) translateX(-7px);
+            transform: scale(1, 1) rotate(-90deg) translateX(-7px);
+  }
+  64% {
+    -webkit-transform: scale(1, 1) rotate(-90deg) translateX(0);
+            transform: scale(1, 1) rotate(-90deg) translateX(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) rotate(-90deg) translateX(0);
+            transform: scale(1, 1) rotate(-90deg) translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(1, 1) rotate(-90deg) translateX(0);
+            transform: scale(1, 1) rotate(-90deg) translateX(0);
+  }
+  10% {
+    -webkit-transform: scale(1.1, 0.9) rotate(-90deg) translateX(0);
+            transform: scale(1.1, 0.9) rotate(-90deg) translateX(0);
+  }
+  30% {
+    -webkit-transform: scale(0.9, 1.1) rotate(-90deg) translateX(-20px);
+            transform: scale(0.9, 1.1) rotate(-90deg) translateX(-20px);
+  }
+  50% {
+    -webkit-transform: scale(1.05, 0.95) rotate(-90deg) translateX(0);
+            transform: scale(1.05, 0.95) rotate(-90deg) translateX(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) rotate(-90deg) translateX(-7px);
+            transform: scale(1, 1) rotate(-90deg) translateX(-7px);
+  }
+  64% {
+    -webkit-transform: scale(1, 1) rotate(-90deg) translateX(0);
+            transform: scale(1, 1) rotate(-90deg) translateX(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) rotate(-90deg) translateX(0);
+            transform: scale(1, 1) rotate(-90deg) translateX(0);
+  }
+}
+
 .intro {
   padding-top: 140px;
   background-position: center;
@@ -489,9 +595,26 @@ body.overflow-hidden {
   position: absolute;
   left: -70px;
   bottom: 20px;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .intro .intro-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   background: radial-gradient(69.79% 69.79% at 14.29% 19.22%, rgba(253, 254, 254, 0.6) 0%, rgba(242, 250, 249, 0.048) 100%);
   background-blend-mode: overlay, normal;
@@ -506,38 +629,44 @@ body.overflow-hidden {
      border-image: radial-gradient(69.79% 69.79% at 14.29% 19.22%, rgba(242, 250, 249, 0.5) 0%, rgba(242, 250, 249, 0.5) rgba(253, 254, 254, 0.6) 100%);
 }
 
+.intro .intro-circle__title {
+  font-family: 'Bad Script';
+  font-size: 21px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #363636;
+  -webkit-animation-name: rotation;
+          animation-name: rotation;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.intro .intro-circle__slogan {
+  font-family: 'Candara';
+  font-size: 30px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #9B9CA0;
+  -webkit-animation-name: rotation-back;
+          animation-name: rotation-back;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
 .intro .intro-circle__spiral {
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-.intro .intro-circle__title {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-family: 'Bad Script';
-  font-size: 21px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #363636;
-}
-
-.intro .intro-circle__slogan {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-family: 'Candara';
-  font-size: 30px;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: #9B9CA0;
 }
 
 .what-we-do {
@@ -1041,7 +1170,6 @@ body.overflow-hidden {
   -webkit-column-gap: 50px;
           column-gap: 50px;
   width: 98%;
-  margin: 35px auto;
 }
 
 .gallery__item {

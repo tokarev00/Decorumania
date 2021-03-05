@@ -1,6 +1,7 @@
 @import 'null';
 @import 'fonts';
 
+
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -210,6 +211,32 @@ body.overflow-hidden {
     }
 }
 
+@keyframes rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg) ;
+    }
+}
+@keyframes rotation-back {
+    0% {
+        transform:rotate(360deg);
+    }
+    100% {
+        transform:rotate(0) ;
+    }
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1)   rotate(-90deg)   translateX(0); }
+    10%  { transform: scale(1.1,.9) rotate(-90deg)  translateX(0); }
+    30%  { transform: scale(.9,1.1) rotate(-90deg)  translateX(-20px); }
+    50%  { transform: scale(1.05,.95) rotate(-90deg) translateX(0); }
+    57%  { transform: scale(1,1)  rotate(-90deg)    translateX(-7px); }
+    64%  { transform: scale(1,1)   rotate(-90deg)   translateX(0); }
+    100% { transform: scale(1,1)   rotate(-90deg)   translateX(0); }
+}
 .intro{
     padding-top: 140px;
     background-position: center;
@@ -230,8 +257,15 @@ body.overflow-hidden {
         position:absolute;
         left: -70px;
         bottom: 20px;
+        animation-name: bounce;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear ;
     }
     .intro-circle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: relative;
         background: radial-gradient(69.79% 69.79% at 14.29% 19.22%, rgba(253, 254, 254, 0.6) 0%, rgba(242, 250, 249, 0.048) 100%);
         background-blend-mode: overlay, normal;
@@ -242,33 +276,33 @@ body.overflow-hidden {
         border-radius: 50%;
         border: transparent 2px solid;
         border-image: radial-gradient(69.79% 69.79% at 14.29% 19.22%, rgba(242, 250, 249, 0.5)  0%, rgba(242, 250, 249, 0.5)rgba(253, 254, 254, 0.6) 100%);
-        &__spiral{
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
         &__title{
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
             font-family: 'Bad Script';
             font-size: 21px;
             letter-spacing: 0.06em;
             text-transform: uppercase;
             color: #363636;
+            animation-name: rotation;
+            animation-duration: 100s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
         }
         &__slogan{
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
             font-family: 'Candara';
             font-size: 30px;
             letter-spacing: 0.02em;
             text-transform: uppercase;
             color: #9B9CA0;
+            animation-name: rotation-back;
+            animation-duration: 100s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        &__spiral{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 }
@@ -652,7 +686,6 @@ body.overflow-hidden {
         columns: 2 400px;
         column-gap: 50px;
         width: 98%;
-        margin: 35px auto;
     }
     &__item{
         display: inline-block;
