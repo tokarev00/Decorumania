@@ -12,12 +12,6 @@ const homeItems ={
             circleTitle: document.querySelector('.what-we-do-circle-title'),
     },
 }
-// const portfolioItems = {
-//     introPortfolio: {
-//         circleTitle: document.querySelector('.portfolio-intro-circle__title'),
-//     }
-// }
-
 
 
 if(homeItems.intro.circleTitle && homeItems.intro.circleSlogan && homeItems.whatWeDo.circleTitle){
@@ -26,9 +20,6 @@ if(homeItems.intro.circleTitle && homeItems.intro.circleSlogan && homeItems.what
     new CircleType(homeItems.whatWeDo.circleTitle);
 }
 
-// if(portfolioItems.introPortfolio.circleTitle){
-//     new CircleType(portfolioItems.introPortfolio.circleTitle);
-// }
 
 //menu
 burgerLogo.addEventListener('click', ()=>{

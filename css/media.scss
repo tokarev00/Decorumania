@@ -16,6 +16,19 @@
         font-size: 27px;
         line-height: 30px;
     }
+
+    .post-date{
+        font-size: 22px;
+    }
+    .post-title{
+        font-size: 35px;
+    }
+    .post-link{
+        font-size: 30px;
+    }
+    .post-content{
+        
+    }
     .header{
         padding-top: 10px;
         padding-bottom: 15px;
@@ -64,7 +77,6 @@
                 text-align: center;
                 transition: all ease-in 1s;
                 transform: translateX(1000px);
-
                 & li{
                     margin-top: 30px;
                     margin-bottom: 30px;
@@ -358,6 +370,78 @@
             padding-bottom: 40px;
         }
     }
+    .contacts{
+        background: url('../img/contacts-page/background.jpg') center / cover no-repeat;
+        padding-top: 70px;
+        padding-bottom: 100px;
+        &__ellipse{
+            display: none;
+        }
+    }
+    .call-back-info{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        &__link--img{
+            display: none;
+        }
+    }
+    .blog-intro{
+        padding-top: 70px;
+        padding-bottom: 50px;
+        &__title{
+            margin-bottom: 30px;
+        }
+        &__title-italic{
+            margin-bottom: 20px;
+            margin-left: 80px;
+        }
+        &__scroll-btn{
+            display: none;
+        }
+    }
+    .best-post{
+        margin-left: 0;
+    }
+    .post-preview{
+        padding-bottom: 20px;
+        &__img{
+            display: none;
+        }
+        &__inner{
+            min-height: 450px;
+        }
+        &__link{
+            font-size: 30px;
+            bottom: 0;
+        }
+    }
+
+    .post-preview-article{
+        width: 100%;
+        height: auto;
+        top: -20px;
+        border-radius: 15px;
+        left: 0;
+        padding: 30px;
+        margin-bottom: 0;
+        bottom: 40px;
+    }
+    .article-intro{
+        padding-top: 70px;
+        padding-bottom: 200px;
+    }
+    .current-post{
+        .post-header{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    .archive{
+        .post-header{
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+    }
 }
 
 
@@ -370,6 +454,25 @@
     }
     .title-italic{
         font-size: 23px;
+    }
+    .post-date{
+        font-size: 20px;
+    }
+    .post-title{
+        font-size: 32px;
+    }
+    .post-excerpt{
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .post-link{
+        font-size: 27px;
+    }
+    .post-link-source{
+        flex-direction: column;
+        span{
+            margin-bottom: 10px;
+        }
     }
     .what-we-do{
         padding-top: 70px;
@@ -501,6 +604,26 @@
         &__img{
             padding-top: 20px;
             padding-bottom: 20px;
+        }
+    }
+    .contacts{
+        padding-bottom: 30px;
+        a{
+            font-size: 20px;
+        }
+        &__circle{
+            display: none;
+        }
+        &__inner{
+            margin-left: 100px;
+        }
+    }
+    .call-back-info{
+        &__inner{
+            justify-content: center;
+            a:last-child{
+                display: none;
+            }
         }
     }
 }
@@ -687,6 +810,64 @@
     .policy{
         &__title{
             font-size: 20px;
+        }
+    }
+    .contacts{
+        padding-bottom: 10px;
+        a{
+            font-size: 18px;
+        }
+        &__title-italic{
+            margin-left: 0;
+            text-align: center;
+        }
+        &__inner{
+            margin-left: 0;
+        }
+        &__social{
+            display: flex;
+            justify-content: center;
+            a:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+    .call-back-info{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        &__inner{
+            justify-content: center;
+            a:last-child{
+                display: none;
+            }
+        }
+    }
+    .blog-intro{
+        &__title-italic{
+            text-align: left;
+        }
+    }
+    .best-post{
+        &::before{
+            display: none;
+        }
+        padding: 10px;
+    }
+    .post-preview{
+        &__inner{
+            min-height: auto;
+            height: auto;
+        }
+        &__link{
+            font-size: 30px;
+            position: static;
+        }
+        .post-preview-article{
+            position: static;
+            padding: 0;
+            border: none;
+            background: transparent;
+            margin-bottom: 30px;
         }
     }
 }
