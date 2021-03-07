@@ -118,8 +118,9 @@
   .intro {
     padding-top: 75px;
     padding-bottom: 60px;
+    overflow: hidden;
   }
-  .intro__title {
+  .intro .main-heading-italic {
     margin-bottom: 75px;
   }
   .intro .intro-circle {
@@ -659,9 +660,6 @@
   }
   .intro__scroll-btn {
     display: none;
-  }
-  .intro__title {
-    margin-bottom: 75px;
   }
   .intro .intro-circle {
     width: 230px;

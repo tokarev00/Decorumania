@@ -142,6 +142,34 @@ body.overflow-hidden {
         bottom: -10px;
     }
 }
+@keyframes rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg) ;
+    }
+}
+@keyframes rotation-back {
+    0% {
+        transform:rotate(360deg);
+    }
+    100% {
+        transform:rotate(0) ;
+    }
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1)   rotate(-90deg)   translateX(0); }
+    10%  { transform: scale(1.1,.9) rotate(-90deg)  translateX(0); }
+    30%  { transform: scale(.9,1.1) rotate(-90deg)  translateX(-20px); }
+    50%  { transform: scale(1.05,.95) rotate(-90deg) translateX(0); }
+    57%  { transform: scale(1,1)  rotate(-90deg)    translateX(-7px); }
+    64%  { transform: scale(1,1)   rotate(-90deg)   translateX(0); }
+    100% { transform: scale(1,1)   rotate(-90deg)   translateX(0); }
+}
+@keyframes text-focus-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
+@keyframes wobble-hor-top{0%,100%{transform:translateX(0);transform-origin:50% 50%}15%{transform:translateX(-30px) rotate(6deg)}30%{transform:translateX(15px) rotate(-6deg)}45%{transform:translateX(-15px) rotate(3.6deg)}60%{transform:translateX(9px) rotate(-2.4deg)}75%{transform:translateX(-6px) rotate(1.2deg)}}
 .header{
     position: fixed;
     backdrop-filter: blur(12px);
@@ -211,32 +239,6 @@ body.overflow-hidden {
     }
 }
 
-@keyframes rotation {
-    0% {
-        transform:rotate(0deg);
-    }
-    100% {
-        transform:rotate(360deg) ;
-    }
-}
-@keyframes rotation-back {
-    0% {
-        transform:rotate(360deg);
-    }
-    100% {
-        transform:rotate(0) ;
-    }
-}
-
-@keyframes bounce {
-    0%   { transform: scale(1,1)   rotate(-90deg)   translateX(0); }
-    10%  { transform: scale(1.1,.9) rotate(-90deg)  translateX(0); }
-    30%  { transform: scale(.9,1.1) rotate(-90deg)  translateX(-20px); }
-    50%  { transform: scale(1.05,.95) rotate(-90deg) translateX(0); }
-    57%  { transform: scale(1,1)  rotate(-90deg)    translateX(-7px); }
-    64%  { transform: scale(1,1)   rotate(-90deg)   translateX(0); }
-    100% { transform: scale(1,1)   rotate(-90deg)   translateX(0); }
-}
 .intro{
     padding-top: 140px;
     background-position: center;
@@ -244,7 +246,26 @@ body.overflow-hidden {
     background-size: cover;
     padding-bottom: 100px;
     &__title{
+        margin-bottom: 0px;
+
+        transform: translateX(-120%);
+        opacity: 0;
+        transition: all 1s ease 0s;
+        &.active{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    .main-heading-italic{
         margin-bottom: 150px;
+
+        transform: translateX(-120%);
+        opacity: 0;
+        transition: all 1s ease 0.3s;
+        &.active{
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
     &__inner{
         display: flex;
@@ -258,7 +279,7 @@ body.overflow-hidden {
         left: -70px;
         bottom: 20px;
         animation-name: bounce;
-        animation-duration: 4s;
+        animation-duration: 2s;
         animation-iteration-count: infinite;
         animation-timing-function: linear ;
     }
@@ -321,12 +342,28 @@ body.overflow-hidden {
         font-size: 42px;
         line-height: 57px;
         color: #F4ECCA;
+
+        transform: translateX(-120%);
+        opacity: 0;
+        transition: all 1s ease 0s;
+        &.active{
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
     &__title-italic{
         font-size: 29px;
         line-height: 75px;
         color: #FEE65B;
         margin-bottom: 40px;
+
+        transform: translateX(-120%);
+        opacity: 0;
+        transition: all 1s ease 0.3s;
+        &.active{
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
     &__list{
         max-width: 560px;
@@ -344,6 +381,10 @@ body.overflow-hidden {
                 left: 0;
                 top: 55%;
                 transform: translateY(-45%);
+            }
+            transition: all 1s ease 0.5s;
+            &.active{
+                animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
             }
         }
     }
@@ -397,6 +438,15 @@ body.overflow-hidden {
         font-size: 42px;
         line-height: 57px;
         color: #F4ECCA;
+
+        
+        transform: translateX(-120%);
+        opacity: 0;
+        transition: all 1s ease 0s;
+        &.active{
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
     ol{
         display: flex;
@@ -406,6 +456,10 @@ body.overflow-hidden {
         counter-reset: num;
         letter-spacing: 0.04em;
         color: #F4ECCA;
+        transition: all 1s ease 0.5s;
+        &.active{
+            animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
+        }
         li{
             &::before {
                 content:'0' counter(num);
@@ -474,6 +528,11 @@ body.overflow-hidden {
             height: 300px;
             top: -70px;
             right: 20px;
+            transform: scale(0);
+            transition: all 2s ease 0.5s;
+        &.active{
+            transform: scale(1);
+        }
     }
     &__link--view-all{
         font-family: 'Bad Script';
@@ -493,6 +552,11 @@ body.overflow-hidden {
         border: 1px rgba(#fff, .2) solid;
         bottom: -50px;
         right: 250px;
+        transform: scale(0);
+        transition: all 2s ease 0.5s;
+        &.active{
+            transform: scale(1);
+        }
         img{
             margin-bottom: -17px;
             margin-left: 10px;
@@ -510,6 +574,10 @@ body.overflow-hidden {
             position: relative;
             overflow: hidden;
             border-radius: 50%;
+            transition: all 3s ease 2s;
+            &.active{
+                animation:wobble-hor-top 3s both;
+            }
             &::before{
                 content: "";
                 display: block;
@@ -551,9 +619,23 @@ body.overflow-hidden {
     text-align: center;
     &__title{
         margin-bottom: 20px;
+        transform: translateX(-120%);
+        opacity: 0;
+        transition: all 1s ease 0s;
+        &.active{
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
     &__title-italic{
         color: #FEE65B;
+        transform: translateX(-120%);
+        opacity: 0;
+        transition: all 1s ease .4s;
+        &.active{
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
     &__img{
         margin-top: 60px;
@@ -567,6 +649,10 @@ body.overflow-hidden {
         font-size: 16px;
         line-height: 30px;
         text-align: justify;
+                    transition: all 2s ease 1s;
+            &.active{
+                animation:text-focus-in 2s cubic-bezier(.55,.085,.68,.53) both;
+            }
     }
 }
 .footer{
@@ -621,7 +707,7 @@ body.overflow-hidden {
     background: url('../img/home/portfolio/bg.svg') center/ cover no-repeat,
     #F4ECCA;
     padding-top: 140px;
-    padding-bottom: 200px;
+    padding-bottom: 220px;
     position: relative;
     &__inner{
         position: relative;
@@ -651,6 +737,10 @@ body.overflow-hidden {
     }
     &__scroll-btn{
         bottom: -120px;
+        animation-name: bounce;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear ;
     }
 }
 
