@@ -78,8 +78,8 @@
                 transition: all ease-in 1s;
                 transform: translateX(1000px);
                 & li{
-                    margin-top: 30px;
-                    margin-bottom: 30px;
+                    margin-top: 60px;
+                    margin-bottom: 60px;
                 }
                 & li:last-child{
                     margin-right: 0px;
@@ -98,9 +98,10 @@
                         font-weight: 700;
                     }
                     color: #F4ECCA;
-                    font-size: 16px;
+                    font-size: 35px;
                     line-height: 20px;
                     letter-spacing: 0.02em;
+                    margin-right: 0;
                 }
             }
             
@@ -127,6 +128,7 @@
     .what-we-do{
         padding-top: 100px;
         padding-bottom: 40px;
+        height: auto;
         &__content{
             align-items: flex-start;
             margin-left: 50px;
@@ -642,7 +644,7 @@
         line-height: 34px;
     }
     .intro{
-        padding-bottom: 60px;
+        padding-bottom: 70px;
         &__inner{
             align-items: center;
         }

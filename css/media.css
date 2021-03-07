@@ -91,17 +91,18 @@
             transform: translateX(1000px);
   }
   .header .nav ul li {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
   .header .nav ul li:last-child {
     margin-right: 0px;
   }
   .header .nav ul a {
     color: #F4ECCA;
-    font-size: 16px;
+    font-size: 35px;
     line-height: 20px;
     letter-spacing: 0.02em;
+    margin-right: 0;
   }
   .header .nav ul a:hover {
     opacity: .8;
@@ -136,6 +137,7 @@
   .what-we-do {
     padding-top: 100px;
     padding-bottom: 40px;
+    height: auto;
   }
   .what-we-do__content {
     -webkit-box-align: start;
@@ -642,7 +644,7 @@
     line-height: 34px;
   }
   .intro {
-    padding-bottom: 60px;
+    padding-bottom: 70px;
   }
   .intro__inner {
     -webkit-box-align: center;
