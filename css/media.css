@@ -59,8 +59,8 @@
     transition: all ease-in 1s;
   }
   .header .nav .burger-logo.active div:nth-child(2) {
-    -webkit-transform: translateX(-500px) scale(0);
-            transform: translateX(-500px) scale(0);
+    -webkit-transform: translateX(-50px) scale(0);
+            transform: translateX(-50px) scale(0);
   }
   .header .nav .burger-logo.active div:nth-child(1) {
     -webkit-transform: rotate(-45deg) translateY(8px);
@@ -116,7 +116,7 @@
     content: "";
   }
   .intro {
-    padding-top: 75px;
+    padding-top: 100px;
     padding-bottom: 60px;
     overflow: hidden;
   }
@@ -163,7 +163,7 @@
     display: none;
   }
   .projects {
-    padding-top: 90px;
+    padding-top: 100px;
     padding-bottom: 10px;
   }
   .projects::before {
@@ -210,7 +210,7 @@
     line-height: 30px;
   }
   .portfolio {
-    padding-top: 70px;
+    padding-top: 100px;
     padding-bottom: 10px;
   }
   .portfolio__title::after {
@@ -245,7 +245,7 @@
     height: 160px;
   }
   .info {
-    padding-top: 70px;
+    padding-top: 100px;
     padding-bottom: 30px;
     text-align: center;
   }
@@ -288,7 +288,7 @@
     margin-right: 20px;
   }
   .portfolio-intro {
-    padding-top: 70px;
+    padding-top: 100px;
     padding-bottom: 20px;
   }
   .portfolio-intro__title {
@@ -352,7 +352,7 @@
     display: none;
   }
   .not-found {
-    padding-top: 70px;
+    padding-top: 100px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -382,7 +382,7 @@
     display: none;
   }
   .policy {
-    padding-top: 70px;
+    padding-top: 100px;
   }
   .policy__title {
     margin-bottom: 30px;
@@ -393,7 +393,7 @@
   }
   .contacts {
     background: url("../img/contacts-page/background.jpg") center/cover no-repeat;
-    padding-top: 70px;
+    padding-top: 100px;
     padding-bottom: 100px;
   }
   .contacts__ellipse {
@@ -407,7 +407,7 @@
     display: none;
   }
   .blog-intro {
-    padding-top: 70px;
+    padding-top: 100px;
     padding-bottom: 50px;
   }
   .blog-intro__title {
@@ -447,7 +447,7 @@
     bottom: 40px;
   }
   .article-intro {
-    padding-top: 70px;
+    padding-top: 100px;
     padding-bottom: 200px;
   }
   .current-post .post-header {
@@ -493,7 +493,6 @@
     margin-bottom: 10px;
   }
   .what-we-do {
-    padding-top: 70px;
     padding-bottom: 30px;
   }
   .what-we-do__content {
@@ -510,9 +509,6 @@
     margin-bottom: 23px;
     font-size: 16px;
     line-height: 23px;
-  }
-  .projects {
-    padding-top: 90px;
   }
   .projects__title {
     text-align: left;
@@ -584,7 +580,6 @@
     margin-bottom: 0;
   }
   .portfolio-intro {
-    padding-top: 70px;
     padding-bottom: 10px;
   }
   .portfolio-intro__text {
@@ -593,9 +588,6 @@
   }
   .portfolio-intro__scroll-btn {
     display: none;
-  }
-  .policy {
-    padding-top: 70px;
   }
   .policy__title {
     text-align: center;
@@ -650,7 +642,6 @@
     line-height: 34px;
   }
   .intro {
-    padding-top: 60px;
     padding-bottom: 60px;
   }
   .intro__inner {

@@ -52,7 +52,7 @@
             }
             .burger-logo.active{
                 div:nth-child(2){
-                    transform: translateX(-500px) scale(0);
+                    transform: translateX(-50px) scale(0);
                 }
                 div:nth-child(1){
                     transform: rotate(-45deg) translateY(8px);
@@ -107,7 +107,7 @@
         }
     }
     .intro{
-        padding-top: 75px;
+        padding-top: 100px;
         padding-bottom: 60px;
         overflow: hidden;
         .main-heading-italic{
@@ -155,7 +155,7 @@
         }
     }
     .projects{
-        padding-top: 90px;
+        padding-top: 100px;
         padding-bottom: 10px;
         &::before{
             display: none;
@@ -198,7 +198,7 @@
         }
     }
     .portfolio{
-        padding-top: 70px;
+        padding-top: 100px;
         padding-bottom: 10px;
         &__title{
             &::after{
@@ -241,7 +241,7 @@
 
     }
     .info{
-        padding-top: 70px;
+        padding-top: 100px;
         padding-bottom: 30px;
         text-align: center;
         &__title{
@@ -279,7 +279,7 @@
         }
     }
     .portfolio-intro{
-        padding-top: 70px;
+        padding-top: 100px;
         padding-bottom: 20px;
         &__title{
             margin-bottom: 10px;
@@ -332,7 +332,7 @@
         }
     }
     .not-found{
-        padding-top: 70px;
+        padding-top: 100px;
         padding-left: 15px;
         padding-right: 15px;
         &__num-title{
@@ -362,7 +362,7 @@
         }
     }
     .policy{
-        padding-top: 70px;
+        padding-top: 100px;
         &__title{
             margin-bottom: 30px;
         }
@@ -373,7 +373,7 @@
     }
     .contacts{
         background: url('../img/contacts-page/background.jpg') center / cover no-repeat;
-        padding-top: 70px;
+        padding-top: 100px;
         padding-bottom: 100px;
         &__ellipse{
             display: none;
@@ -387,7 +387,7 @@
         }
     }
     .blog-intro{
-        padding-top: 70px;
+        padding-top: 100px;
         padding-bottom: 50px;
         &__title{
             margin-bottom: 30px;
@@ -428,7 +428,7 @@
         bottom: 40px;
     }
     .article-intro{
-        padding-top: 70px;
+        padding-top: 100px;
         padding-bottom: 200px;
     }
     .current-post{
@@ -476,7 +476,6 @@
         }
     }
     .what-we-do{
-        padding-top: 70px;
         padding-bottom: 30px;
         &__content{
             margin-left: 40px;
@@ -497,7 +496,6 @@
         }
     }
     .projects{
-        padding-top: 90px;
         &__title{
             text-align: left;
             margin-right: 15%;
@@ -579,10 +577,7 @@
         }
     }
     .portfolio-intro{
-        padding-top: 70px;
         padding-bottom: 10px;
-
-
         &__text{
             padding-right: 0;
             padding-left: 0;
@@ -592,8 +587,6 @@
         }
     }
     .policy{
-
-        padding-top: 70px;
         &__title{
             text-align: center;
             font-size: 23px;
@@ -649,7 +642,6 @@
         line-height: 34px;
     }
     .intro{
-        padding-top: 60px;
         padding-bottom: 60px;
         &__inner{
             align-items: center;
