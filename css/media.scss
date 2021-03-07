@@ -109,7 +109,7 @@
     }
     .intro{
         padding-top: 100px;
-        padding-bottom: 60px;
+        padding-bottom: 80px;
         overflow: hidden;
         .main-heading-italic{
             margin-bottom: 75px;
@@ -128,7 +128,7 @@
     .what-we-do{
         padding-top: 100px;
         padding-bottom: 40px;
-        height: auto;
+        min-height: auto;
         &__content{
             align-items: flex-start;
             margin-left: 50px;
@@ -644,7 +644,6 @@
         line-height: 34px;
     }
     .intro{
-        padding-bottom: 70px;
         &__inner{
             align-items: center;
         }

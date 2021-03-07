@@ -118,7 +118,7 @@
   }
   .intro {
     padding-top: 100px;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
     overflow: hidden;
   }
   .intro .main-heading-italic {
@@ -137,7 +137,7 @@
   .what-we-do {
     padding-top: 100px;
     padding-bottom: 40px;
-    height: auto;
+    min-height: auto;
   }
   .what-we-do__content {
     -webkit-box-align: start;
@@ -642,9 +642,6 @@
   .main-heading-italic {
     font-size: 23px;
     line-height: 34px;
-  }
-  .intro {
-    padding-bottom: 70px;
   }
   .intro__inner {
     -webkit-box-align: center;
