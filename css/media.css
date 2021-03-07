@@ -262,13 +262,7 @@
     margin-bottom: 20px;
   }
   .info__text {
-    border: 1px solid #E9E2C5;
-    border-radius: 15px;
-    padding: 60px;
-    font-family: 'Candara';
-    font-size: 16px;
-    line-height: 30px;
-    text-align: justify;
+    padding: 10px;
   }
   .footer__inner {
     -ms-flex-wrap: wrap;
@@ -392,6 +386,9 @@
   .policy__img {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+  .policy__text {
+    padding: 10px;
   }
   .contacts {
     background: url("../img/contacts-page/background.jpg") center/cover no-repeat;
