@@ -432,6 +432,7 @@
   }
   .post-preview {
     padding-bottom: 20px;
+    min-height: auto;
   }
   .post-preview__img {
     display: none;
