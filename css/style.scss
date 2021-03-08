@@ -170,6 +170,7 @@ body.overflow-hidden {
 }
 @keyframes text-focus-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
 @keyframes wobble-hor-top{0%,100%{transform:translateX(0);transform-origin:50% 50%}15%{transform:translateX(-30px) rotate(6deg)}30%{transform:translateX(15px) rotate(-6deg)}45%{transform:translateX(-15px) rotate(3.6deg)}60%{transform:translateX(9px) rotate(-2.4deg)}75%{transform:translateX(-6px) rotate(1.2deg)}}
+@keyframes fade-in-fwd{0%{transform:translateZ(-80px);opacity:0}100%{transform:translateZ(0);opacity:1}}
 .header{
     position: fixed;
     backdrop-filter: blur(12px);
@@ -273,6 +274,7 @@ body.overflow-hidden {
         flex-direction: column;
         align-items: flex-end;
         position: relative;
+        margin-right: 5%;
     }
     &__scroll-btn{
         position:absolute;
@@ -456,10 +458,6 @@ body.overflow-hidden {
         counter-reset: num;
         letter-spacing: 0.04em;
         color: #F4ECCA;
-        transition: all 1s ease 0.5s;
-        &.active{
-            animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
-        }
         li{
             &::before {
                 content:'0' counter(num);
@@ -482,6 +480,10 @@ body.overflow-hidden {
             font-weight: 400;
             line-height: 30px;
             text-align: justify;
+            transition: all 1s ease 0.5s;
+            &.active{
+                animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
+            }
             b{
                 font-family: 'Alegreya SC';
                 font-size: 26px;
@@ -714,9 +716,24 @@ body.overflow-hidden {
     }
     &__title{
         margin-bottom: 60px;
+        
+        transform: translateX(-120%);
+        opacity: 0;
+        transition: all 1s ease 0s;
+        &.active{
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
     &__title-italic{
         margin-bottom: 40px;
+        transform: translateX(-120%);
+        opacity: 0;
+        transition: all 1s ease 0.5s;
+        &.active{
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
     &__text-italic{
         font-family: 'Bad Script';
@@ -724,6 +741,11 @@ body.overflow-hidden {
         line-height: 167%;
         letter-spacing: 0.02em;
         margin-bottom: 40px;
+
+        transition: all 1s ease 1s;
+        &.active{
+            animation:text-focus-in 1.5s cubic-bezier(.55,.085,.68,.53) both;
+        }
     }
     &__text{
         font-family: 'Candara';
@@ -731,8 +753,12 @@ body.overflow-hidden {
         line-height: 187%;
         text-align: justify;
         letter-spacing: 0.04em;
-        li{
+        p{
             margin-bottom: 10px;
+            transition: all 1.5s ease 1.2s;
+            &.active{
+                animation:text-focus-in 2s cubic-bezier(.55,.085,.68,.53) both;
+            }
         }
     }
     &__scroll-btn{
@@ -753,6 +779,13 @@ body.overflow-hidden {
     padding-bottom: 230px;
     &__title{
         color: #F4ECCA;
+        transform: translateX(-120%);
+        opacity: 0;
+        transition: all 1s ease 0s;
+        &.active{
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
     &__title-italic{
         &::after{
@@ -763,6 +796,13 @@ body.overflow-hidden {
         }
         &:hover{
             opacity: .7;
+        }
+        transform: translateX(-120%);
+        opacity: 0;
+        transition: all 1s ease 0s;
+        &.active{
+            transform: translateX(0);
+            opacity: 1;
         }
         position: relative;
         display:block;
@@ -783,6 +823,12 @@ body.overflow-hidden {
         margin-bottom: 40px;
         border-radius: 15px;
         z-index: 2;
+        transition: all 2.5s ease 0s;
+        opacity: 0;
+        &.active{
+            opacity: 1;
+            animation:fade-in-fwd 3s cubic-bezier(.39,.575,.565,1.000) both;
+        }
         &:after{
             content: "";
             background: radial-gradient(69.79% 69.79% at 14.29% 19.22%, rgba(253, 254, 254, 0.7) 0%, rgba(242, 250, 249, 0.1) 100%);
