@@ -438,7 +438,7 @@
     display: none;
   }
   .post-preview__inner {
-    min-height: 450px;
+    min-height: 460px;
   }
   .post-preview__link {
     font-size: 30px;

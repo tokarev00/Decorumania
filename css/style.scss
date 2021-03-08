@@ -1185,6 +1185,7 @@ body.overflow-hidden {
         position: absolute;
         right: 0;
         bottom: 100px;
+        z-index: 4;
         img{
             width: 800px;
             height: 800px;
