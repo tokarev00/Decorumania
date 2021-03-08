@@ -73,12 +73,14 @@
   .header .nav ul.active {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+    opacity: 1;
   }
   .header .nav ul {
     position: absolute;
     top: 59px;
     left: 0;
     right: 0;
+    bottom: 0;
     min-height: 100vh;
     background-color: #363636;
     z-index: 100;
@@ -89,6 +91,8 @@
     transition: all ease-in 1s;
     -webkit-transform: translateX(1000px);
             transform: translateX(1000px);
+    overflow: scroll;
+    opacity: 0;
   }
   .header .nav ul li {
     margin-top: 60px;
@@ -120,6 +124,10 @@
     padding-top: 100px;
     padding-bottom: 80px;
     overflow: hidden;
+    min-height: auto;
+  }
+  .intro__inner {
+    margin-right: 0;
   }
   .intro .main-heading-italic {
     margin-bottom: 75px;

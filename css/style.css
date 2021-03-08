@@ -994,6 +994,7 @@ body.overflow-hidden {
   font-weight: 400;
   line-height: 30px;
   text-align: justify;
+  opacity: 0;
   -webkit-transition: all 1s ease 0.5s;
   transition: all 1s ease 0.5s;
 }
@@ -1013,6 +1014,7 @@ body.overflow-hidden {
 }
 
 .projects ol li.active {
+  opacity: 1;
   -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
           animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
@@ -1024,6 +1026,7 @@ body.overflow-hidden {
 }
 
 .portfolio {
+  min-height: auto;
   padding-top: 140px;
   padding-bottom: 140px;
   position: relative;
@@ -1375,6 +1378,7 @@ body.overflow-hidden {
   line-height: 167%;
   letter-spacing: 0.02em;
   margin-bottom: 40px;
+  opacity: 0;
   -webkit-transition: all 1s ease 1s;
   transition: all 1s ease 1s;
 }
@@ -1382,6 +1386,7 @@ body.overflow-hidden {
 .portfolio-intro__text-italic.active {
   -webkit-animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
           animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  opacity: 1;
 }
 
 .portfolio-intro__text {
@@ -1396,11 +1401,13 @@ body.overflow-hidden {
   margin-bottom: 10px;
   -webkit-transition: all 1.5s ease 1.2s;
   transition: all 1.5s ease 1.2s;
+  opacity: 0;
 }
 
 .portfolio-intro__text p.active {
   -webkit-animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
           animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  opacity: 1;
 }
 
 .portfolio-intro__scroll-btn {
@@ -1626,6 +1633,7 @@ body.overflow-hidden {
 }
 
 .contacts a {
+  max-width: 310px;
   color: #F4EABB;
 }
 
@@ -1743,10 +1751,21 @@ body.overflow-hidden {
   top: -150px;
   right: 250px;
   z-index: 3;
+  -webkit-animation-name: wobble-hor-top;
+          animation-name: wobble-hor-top;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .call-back-info__link--img:hover {
-  opacity: .9;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 
 .blog-intro {
@@ -1763,26 +1782,48 @@ body.overflow-hidden {
 .blog-intro__title {
   color: #F4EABB;
   margin-bottom: 100px;
+  -webkit-transform: translateX(-120%);
+          transform: translateX(-120%);
+  opacity: 0;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+
+.blog-intro__title.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 
 .blog-intro__title-italic {
   color: #F4EABB;
   text-align: center;
   margin-bottom: 70px;
+  -webkit-transform: translateX(-120%);
+          transform: translateX(-120%);
+  opacity: 0;
+  -webkit-transition: all 1s ease 0.5s;
+  transition: all 1s ease 0.5s;
+}
+
+.blog-intro__title-italic.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 
 .blog-intro__scroll-btn {
   -webkit-transform-origin: center;
           transform-origin: center;
   display: inline-block;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
   font-family: 'Bad Script';
   font-size: 24px;
   letter-spacing: 0.02em;
   color: rgba(155, 156, 160, 0.5);
   position: relative;
   padding-right: 50px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   margin-left: -55px;
 }
 
@@ -1805,6 +1846,15 @@ body.overflow-hidden {
   margin-left: 300px;
   padding: 10px 10px 10px 80px;
   position: relative;
+  opacity: 0;
+  -webkit-transition: all 2s ease 2s;
+  transition: all 2s ease 2s;
+}
+
+.best-post.active {
+  opacity: 1;
+  -webkit-animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+          animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .best-post::before {
@@ -1847,10 +1897,21 @@ body.overflow-hidden {
   font-size: 38px;
   letter-spacing: 0.02em;
   color: #363636;
+  -webkit-transform: translateX(-120%);
+          transform: translateX(-120%);
+  opacity: 0;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 
 .post-preview__link:hover {
   opacity: .7;
+}
+
+.post-preview__link.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 
 .post-preview__link:after {
@@ -1868,20 +1929,14 @@ body.overflow-hidden {
 
 .post-preview__img {
   position: absolute;
-  width: 850px;
-  height: 850px;
   right: 0;
   bottom: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid rgba(242, 250, 249, 0.5);
 }
 
 .post-preview__img img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
 }
 
 .post-preview-article {
@@ -1911,6 +1966,15 @@ body.overflow-hidden {
           backdrop-filter: blur(20px);
   border-radius: 50%;
   padding: 150px;
+  opacity: 0;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+
+.post-preview-article.active {
+  opacity: 1;
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+          animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .post-preview-article__date {
