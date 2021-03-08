@@ -558,7 +558,7 @@ body.overflow-hidden {
         bottom: -50px;
         right: 250px;
         transform: scale(0);
-        transition: all 2s ease 0.5s;
+        transition: all 1s ease 0.5s;
         &.active{
             transform: scale(1);
         }
@@ -654,10 +654,12 @@ body.overflow-hidden {
         font-size: 16px;
         line-height: 30px;
         text-align: justify;
-                    transition: all 2s ease 1s;
-            &.active{
-                animation:text-focus-in 2s cubic-bezier(.55,.085,.68,.53) both;
-            }
+        transition: all 2s ease 1s;
+        opacity: 0;
+        &.active{
+            opacity: 1;
+            animation:text-focus-in 2s cubic-bezier(.55,.085,.68,.53) both;
+        }
     }
 }
 .footer{
@@ -1163,6 +1165,7 @@ body.overflow-hidden {
         transform: translateX(-120%);
         opacity: 0;
         transition: all 1s ease 0s;
+        z-index: 1;
         &.active{
             transform: translateX(0);
             opacity: 1;
@@ -1209,6 +1212,7 @@ body.overflow-hidden {
     padding: 150px;
     opacity: 0;
     transition: all 1s ease 0s;
+    z-index: 2;
     &.active{
         opacity: 1;
         animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
