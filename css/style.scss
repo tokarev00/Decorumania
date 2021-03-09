@@ -385,7 +385,9 @@ body.overflow-hidden {
                 transform: translateY(-45%);
             }
             transition: all 1s ease 0.5s;
+            opacity: 0;
             &.active{
+                opacity: 1;
                 animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
             }
         }
@@ -418,6 +420,10 @@ body.overflow-hidden {
         letter-spacing: .1em;
         text-transform: uppercase;
         color: #363636;
+        animation-name: rotation;
+        animation-duration: 100s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
     }
 }
 .projects{
@@ -556,7 +562,7 @@ body.overflow-hidden {
         border-radius: 50%;
         border: 1px rgba(#fff, .2) solid;
         bottom: -50px;
-        right: 250px;
+        right: 25%;
         transform: scale(0);
         transition: all 1s ease 0.5s;
         &.active{
@@ -1088,25 +1094,23 @@ body.overflow-hidden {
         }
     }
     &__scroll-btn{
-        transform-origin: center;
-        display: inline-block;
-        font-family: 'Bad Script';
-        font-size: 24px;
-        letter-spacing: 0.02em;
         color: rgba(155, 156, 160, 0.5);
-        position: relative;
-        padding-right: 50px;
-        transform: rotate(90deg);
-        margin-left: -55px;
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear ;
         &:hover{
             opacity: .7;
         }
+        &::before{
+            display: none;
+        }
         &:after{
             content: url('../img/blog/arrow-grey.svg');
-            transform: rotate(-90deg);
+            transform: rotate(90deg);
             position: absolute;
-            right: 0;
-            top: -14px;
+            right: 137px;
+            bottom: -26px;
             transform-origin: center;
 
         }

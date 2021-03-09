@@ -878,6 +878,7 @@ body.overflow-hidden {
   padding-left: 40px;
   -webkit-transition: all 1s ease 0.5s;
   transition: all 1s ease 0.5s;
+  opacity: 0;
 }
 
 .what-we-do__list li::before {
@@ -890,6 +891,7 @@ body.overflow-hidden {
 }
 
 .what-we-do__list li.active {
+  opacity: 1;
   -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
           animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
@@ -929,6 +931,14 @@ body.overflow-hidden {
   letter-spacing: .1em;
   text-transform: uppercase;
   color: #363636;
+  -webkit-animation-name: rotation;
+          animation-name: rotation;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .projects {
@@ -1102,7 +1112,7 @@ body.overflow-hidden {
   border-radius: 50%;
   border: 1px rgba(255, 255, 255, 0.2) solid;
   bottom: -50px;
-  right: 250px;
+  right: 25%;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transition: all 1s ease 0.5s;
@@ -1815,31 +1825,32 @@ body.overflow-hidden {
 }
 
 .blog-intro__scroll-btn {
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  display: inline-block;
-  font-family: 'Bad Script';
-  font-size: 24px;
-  letter-spacing: 0.02em;
   color: rgba(155, 156, 160, 0.5);
-  position: relative;
-  padding-right: 50px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  margin-left: -55px;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .blog-intro__scroll-btn:hover {
   opacity: .7;
 }
 
+.blog-intro__scroll-btn::before {
+  display: none;
+}
+
 .blog-intro__scroll-btn:after {
   content: url("../img/blog/arrow-grey.svg");
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   position: absolute;
-  right: 0;
-  top: -14px;
+  right: 137px;
+  bottom: -26px;
   -webkit-transform-origin: center;
           transform-origin: center;
 }
